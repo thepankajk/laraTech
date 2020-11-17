@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd
+    https://www.springframework.org/schema/context
+    https://www.springframework.org/schema/context/spring-context.xsd">
+        
+<bean class="springCore.StudentPrimitiveData" name="student1">
+<property name="studentId">
+<value>1001</value>
+</property>
+<property name="studentName">
+<value>Albert Ainstine</value>
+</property>
+<property name="studentAddress">
+<value>Jermany</value>
+</property>
+</bean>
+<!-- p-namespace for inject setter based dependency -->
+<bean class="springCore.StudentPrimitiveData" name="student2" p:studentId="1" 
+p:studentName="newton" p:studentAddress="london"/>
+
+<bean class="springCore.StudentCollectionData" name="student3">
+<property name="name">
+<value>Albert</value>
+</property>
+<property name="phones">
+<list>
+<value>8794351</value>
+<value>998594351</value>
+<value>2148794351</value>
+<value>058794351</value>
+</list>
+</property>
+<property name="address">
+<set>
+<value>london</value>
+<value>new york</value>
+<value>singapore</value>
+<value>peris</value>
+</set>
+</property>
+<property name="cources">
+<map>
+<entry key="java" value="2 months"></entry>
+<entry key="pythan" value="1 months"></entry>
+</map>
+</property>
+</bean>
+
+<bean class="" name="">
+
+
+
+
+</bean>
+
+
+
+
+</beans>
