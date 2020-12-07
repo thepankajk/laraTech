@@ -18,5 +18,12 @@ public class MainMethod
         System.out.println("Student Address:-"+student3.getAddress());
         System.out.println("Student Phones:-"+student3.getPhones());
         System.out.println("Student Cources:-"+student3.getCources());
+        
+        pojoRefA temp=(pojoRefA) context.getBean("aref");
+        System.out.println("value of x:-"+temp.getX());
+        System.out.println("value of y:-"+temp.getOb().getY());
+        
+        pojoConstructor person=(pojoConstructor)context.getBean("person");
+        System.out.println("for constructor injection:-"+person);
     }
 }

@@ -7,7 +7,8 @@
     https://www.springframework.org/schema/beans/spring-beans.xsd
     https://www.springframework.org/schema/context
     https://www.springframework.org/schema/context/spring-context.xsd">
-        
+     <!-- for primitive type data -->   
+     
 <bean class="springCore.StudentPrimitiveData" name="student1">
 <property name="studentId">
 <value>1001</value>
@@ -20,9 +21,12 @@
 </property>
 </bean>
 <!-- p-namespace for inject setter based dependency -->
+
 <bean class="springCore.StudentPrimitiveData" name="student2" p:studentId="1" 
 p:studentName="newton" p:studentAddress="london"/>
 
+     <!-- for collection type data -->   
+     
 <bean class="springCore.StudentCollectionData" name="student3">
 <property name="name">
 <value>Albert</value>
@@ -50,8 +54,27 @@ p:studentName="newton" p:studentAddress="london"/>
 </map>
 </property>
 </bean>
-
-<bean class="" name="">
+     <!-- for Reference data type  --> 
+     <bean class="springCore.pojoRefB" name="bref">
+     <property name="y" value="20"/>
+     </bean>
+     <bean class="springCore.pojoRefA" name="aref">
+     <property name="x" value="100"/>
+     <property name="ob" >
+     <ref bean="bref"/>
+     </property>
+     
+     </bean>
+     
+     
+     
+     
+       
+<!-- for Constructor data type  -->
+ 
+<bean class="springCore.pojoConstructor" name="person">
+<constructor-arg value="100" type="int" index="1"/>
+<constructor-arg value="12" type="int" index="0"/>
 
 
 
