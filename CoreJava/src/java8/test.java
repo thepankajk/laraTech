@@ -1,17 +1,14 @@
 package java8;
 
+import java.util.Scanner;
+
 public class test {
-public static void main(String[] args) {
-String st1="pankaj";
-char[] ch1=st1.toCharArray();
-//System.out.println(ch1);
+    public static void main(String[] args) {
+        int n = 5, i = 0;
+        do {
+            System.out.println(n * i);
+            System.out.println("-hello");
+        } while (true);
 
-for(int i=0;i<st1.length();i++) {
-	System.out.println(ch1[i]);
+    }
 }
-	
-	
-}
-}
-
-
