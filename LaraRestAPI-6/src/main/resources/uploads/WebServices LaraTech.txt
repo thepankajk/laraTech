@@ -1,0 +1,13 @@
+Web Service LaraTech
+-----------------------
+Requred Software
+1.WinRar
+2.JDK
+3.Eclipse
+4.Editplus
+
+@RequestParam :- it is used for argument
+of a method. if you want to intialize argument of
+method through annotation in this case we are using
+@RequestParam annotation.
+default its true, you can make it false.
