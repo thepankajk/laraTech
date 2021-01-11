@@ -1,5 +1,8 @@
 package com.example.jpa3;
 
-public class PersonRepository {
+import org.springframework.data.repository.CrudRepository;
 
+public interface PersonRepository extends CrudRepository<Person,Integer>{
+	
 }
+
