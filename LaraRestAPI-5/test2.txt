@@ -1,0 +1,26 @@
+create table emp(id int primary key auto_increment,name varchar(20),
+city varchar(20) default 'bangalore',age int check(age>=20),
+email varchar(20) check(email like '%@gmail.com'),salary int);
+insert into emp values(1,'albert','berline',25,'a@gmail.com',45000);
+insert into emp values(2,'newton','london',45,'n@gmail.com',55000);
+insert into emp values(3,'alva','new york',55,'al@gmail.com',85000);
+insert into emp values(4,'maxwell','peris',35,'m@gmail.com',25000);
+insert into emp values(5,'thomsan','masco',65,'t@gmail.com',95000);
+ 
+
+create table address(id int primary key auto_increment,
+name varchar(20),city varchar(20));
+insert into address values(101,'albert','berline');
+insert into address values(102,'newton','london');
+insert into address values(103,'alva','new york');
+insert into address values(104,'maxwell','peris');
+insert into address values(105,'thomsan','masco'); 
+
+create table updated_emp(id int primary key auto_increment,name varchar(20),
+city varchar(20),age int,email varchar(20),salary int);  
+
+create table deleted_emp(id int primary key auto_increment,name varchar(20),
+city varchar(20),age int,email varchar(20),salary int);
+
+create table inserted_emp(id int primary key auto_increment,name varchar(20),
+city varchar(20),age int,email varchar(20),salary int);            
